@@ -2,6 +2,11 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="white2">#919090</color>
     <color name="red">#FA0404</color>
     <color name="green">#66EB35</color>
+    <color name="m_red">#984D4D</color>
+    <color name="bhura">#7D7A7A</color>
+    <color name="greenBtn">#035F29</color>
+    <color name="buttonPress">#046F30</color>
 </resources>

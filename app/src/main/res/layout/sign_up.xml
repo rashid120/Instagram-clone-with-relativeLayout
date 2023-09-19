@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#660832"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/signPageTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Create new account"
+        android:textSize="25sp"
+        android:textColor="@color/white"
+        android:layout_marginTop="20dp"
+        tools:ignore="HardcodedText" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/firstEditText2"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:hint="Create username"
+        android:layout_below="@+id/signPageTitle"
+        app:boxStrokeColor="#00C853"
+        app:hintTextColor="#072BF4"
+        android:layout_marginTop="80dp"
+        tools:ignore="HardcodedText">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/signUpUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:paddingStart="7dp"
+            android:textColorHint="@color/white"
+            tools:ignore="RtlCompat,RtlSymmetry,TextContrastCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/secondEditText2"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:hint="Create password"
+        app:boxStrokeColor="#00C853"
+        app:hintTextColor="#072BF4"
+        app:boxStrokeErrorColor="@color/white"
+        android:layout_marginTop="15dp"
+        app:passwordToggleEnabled="true"
+        android:layout_below="@id/firstEditText2"
+        tools:ignore="HardcodedText">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/signUpPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:paddingStart="7dp"
+            tools:ignore="RtlCompat,RtlSymmetry,TextContrastCheck"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/signUpBtn"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/secondEditText2"
+        android:text="Sign Up"
+        android:hapticFeedbackEnabled="true"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="#051EAD"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        tools:ignore="HardcodedText,UnusedAttribute" />
+
+</RelativeLayout>

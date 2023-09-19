@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/downloadVideo"
+        android:title="Download video"
+        />
+    <item
+        android:id="@+id/shareVideo"
+        android:title="Share video"
+        />
+    <item
+        android:id="@+id/reportVideo"
+        android:title="Report video"
+        />
+</menu>

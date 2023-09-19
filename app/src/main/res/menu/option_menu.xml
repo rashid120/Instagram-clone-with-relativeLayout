@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/block"
+        android:title="Block"
+        tools:ignore="HardcodedText"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/follow"
+        android:title="Follow"
+        app:showAsAction="never"
+        tools:ignore="HardcodedText"/>
+
+    <item
+        android:id="@+id/report"
+        android:title="Report"
+        app:showAsAction="never"
+        tools:ignore="HardcodedText"/>
+
+</menu>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+<!--    username textView-->
+    <TextView
+        android:id="@+id/videoName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="TextView"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/showVideoDesc"
+        app:layout_constraintStart_toStartOf="@id/showVideoDesc" />
+
+<!--    description-->
+    <TextView
+        android:id="@+id/showVideoDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:textColor="@color/white"
+        android:text="Jonny jonny yes papa, eating sugar no papa"
+        app:layout_constraintStart_toStartOf="@id/postTimeShow"
+        app:layout_constraintBottom_toTopOf="@id/postTimeShow"
+        android:maxWidth="230dp"
+        />
+
+    <TextView
+        android:id="@+id/showMoreLess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="show more"
+        android:textSize="10sp"
+        android:layout_marginStart="1dp"
+        app:layout_constraintBottom_toBottomOf="@id/showVideoDesc"
+        app:layout_constraintStart_toEndOf="@id/showVideoDesc"
+        android:textColor="@color/bhura"
+        />
+
+<!--    published date-->
+    <TextView
+        android:id="@+id/postTimeShow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="-5dp"
+        android:text="Date : "
+        android:textColor="@color/white2"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/videoView"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+<!--    like icon-->
+    <ImageView
+        android:id="@+id/likeVideo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/like_icon"
+        app:layout_constraintBottom_toTopOf="@+id/commentVideo"
+        app:layout_constraintEnd_toEndOf="@id/videoView"
+        android:layout_marginBottom="50dp"
+        />
+<!--    count likes on video-->
+    <TextView
+        android:id="@+id/countLikeTextV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="200"
+        android:textSize="13sp"
+        android:maxWidth="55dp"
+        android:textColor="@color/white"
+        android:maxLines="1"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@id/likeVideo"
+        app:layout_constraintStart_toStartOf="@id/likeVideo"
+        app:layout_constraintTop_toBottomOf="@id/likeVideo"
+        android:layout_marginTop="5dp"
+        />
+
+<!--    comment icon-->
+    <ImageView
+        android:id="@+id/commentVideo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/comments_icon"
+        app:layout_constraintBottom_toTopOf="@+id/moreVertOnVideo"
+        app:layout_constraintEnd_toEndOf="@id/videoView"
+        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="10dp"
+        />
+
+<!--    count comments-->
+    <TextView
+        android:id="@+id/countCommentsTxtV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="200"
+        android:textSize="13sp"
+        android:maxLines="1"
+        android:maxWidth="55dp"
+        android:textColor="@color/white"
+        android:inputType="number"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="@+id/commentVideo"
+        app:layout_constraintStart_toStartOf="@+id/commentVideo"
+        app:layout_constraintTop_toBottomOf="@+id/commentVideo" />
+
+<!--    moreVert icon-->
+    <ImageView
+        android:id="@+id/moreVertOnVideo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/more"
+        app:layout_constraintBottom_toBottomOf="@id/videoView"
+        app:layout_constraintEnd_toEndOf="@id/videoView"
+        android:layout_marginBottom="10dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.AccountFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/profileToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentTop="true"
+        android:background="#2962FF"
+        app:menu="@menu/profile_menu"
+        app:title="rashid_ekbal1" />
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/profileToolbar"
+        >
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:contentScrim="@color/green"
+                app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
+                app:title="This is a Collapsing app"
+                app:titleCollapseMode="scale">
+
+
+                <RelativeLayout
+                    android:id="@+id/imagePostsFollowers"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:padding="10dp"
+                    app:layout_collapseMode="parallax"
+                    tools:ignore="UselessParent">
+
+                    <ImageView
+                        android:id="@+id/profileImage"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:background="@drawable/gol"
+                        android:clipToOutline="true"
+                        android:layout_marginTop="5dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/rashid"
+                        tools:ignore="ContentDescription,UnusedAttribute" />
+
+                    <TextView
+                        android:id="@+id/postNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="37dp"
+                        android:layout_marginRight="37dp"
+                        android:layout_toStartOf="@+id/followersNumber"
+                        android:layout_toLeftOf="@+id/followersNumber"
+                        android:text="18"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/posts"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/postNumber"
+                        android:layout_marginEnd="18dp"
+                        android:layout_marginRight="18dp"
+                        android:layout_toStartOf="@+id/followers"
+                        android:layout_toLeftOf="@+id/followers"
+                        android:text="Posts"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/followersNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="38dp"
+                        android:layout_toLeftOf="@+id/followingNumber"
+                        android:text="500B"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText,RtlHardcoded" />
+
+                    <TextView
+                        android:id="@+id/followers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/followersNumber"
+                        android:layout_marginEnd="13dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_toStartOf="@id/following"
+                        android:layout_toLeftOf="@id/following"
+                        android:text="Followers"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/followingNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginRight="20dp"
+                        android:text="313"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/following"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/followingNumber"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:text="Following"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/fullName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/profileImage"
+                        android:layout_marginTop="3dp"
+                        android:fontFamily="sans-serif-black"
+                        android:text="Rashid khan"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/work"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/fullName"
+                        android:layout_marginTop="3dp"
+                        android:text="Software Developer"
+                        android:textColor="@color/white2"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/bioLine1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/work"
+                        android:layout_marginTop="3dp"
+                        android:fontFamily="sans-serif-black"
+                        android:text="_Proud To Be A Indian Muslim"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/bioLine2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/bioLine1"
+                        android:layout_marginTop="3dp"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:text="_respect for everyone 🕯️"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/bioLine3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/bioLine2"
+                        android:layout_marginTop="3dp"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:text="_🚭 No smoking"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/bioLine4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/bioLine3"
+                        android:layout_marginTop="3dp"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:text="_🥷Single... more"
+                        tools:ignore="HardcodedText" />
+
+                    <ImageView
+                        android:id="@+id/fbIcon"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_below="@+id/bioLine4"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/facebook"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/facebookTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/bioLine4"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_toEndOf="@id/fbIcon"
+                        android:layout_toRightOf="@id/fbIcon"
+                        android:text="Facebook profile"
+                        android:textColor="#6275E1"
+                        tools:ignore="HardcodedText" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/dashboard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/fbIcon"
+                        android:layout_marginTop="15dp"
+                        app:cardBackgroundColor="@color/bhura"
+                        app:cardCornerRadius="7dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp">
+
+                            <TextView
+                                android:id="@+id/professionalText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Professional dashboard"
+                                android:textColor="@color/white"
+                                android:textStyle="bold"
+                                tools:ignore="HardcodedText" />
+
+                            <TextView
+                                android:id="@+id/accounts27"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/professionalText"
+                                android:text="27 accounts reached in the last 30 days."
+                                android:textColor="#CBC9C9"
+                                android:textSize="12sp"
+                                tools:ignore="HardcodedText,TextContrastCheck" />
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <!--                edit, Share profile, Call button-->
+                    <LinearLayout
+                        android:id="@+id/editSpCBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/dashboard"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/editProfileBtn"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/bhura"
+                            android:text="Edit profile"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            tools:ignore="HardcodedText,UnusedAttribute" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/shareProfileBtn"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="1.2"
+                            android:backgroundTint="@color/bhura"
+                            android:text="Share profile"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            tools:ignore="HardcodedText,UnusedAttribute" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/callProfileBtn"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/bhura"
+                            android:text="Call"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            tools:ignore="HardcodedText,UnusedAttribute" />
+                    </LinearLayout>
+
+                    <!--                Highlights post-->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/highLightsPost"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_below="@id/editSpCBtn"
+                        android:layout_marginTop="15dp"
+                        app:cardCornerRadius="100dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:importantForAccessibility="no"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/konur" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/highLightsPost"
+                        android:layout_alignEnd="@+id/highLightsPost"
+                        android:layout_alignRight="@+id/highLightsPost"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:gravity="center"
+                        android:text="Highlights"
+                        tools:ignore="HardcodedText" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/addHighLightsPost"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_alignTop="@+id/highLightsPost"
+                        android:layout_alignBottom="@+id/highLightsPost"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginBottom="0dp"
+                        android:layout_toEndOf="@id/highLightsPost"
+                        android:layout_toRightOf="@id/highLightsPost"
+                        app:cardBackgroundColor="@color/black"
+                        app:cardCornerRadius="100dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:importantForAccessibility="no"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/add" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/newHighLight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/addHighLightsPost"
+                        android:layout_alignStart="@+id/addHighLightsPost"
+                        android:layout_alignLeft="@+id/addHighLightsPost"
+                        android:layout_alignEnd="@+id/addHighLightsPost"
+                        android:layout_alignRight="@+id/addHighLightsPost"
+                        android:gravity="center"
+                        android:text="New"
+                        tools:ignore="HardcodedText" />
+                    <!--                TabLayout     Photos, videos, contacts-->
+
+                </RelativeLayout>
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/green"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/photosVideosContactsTabLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:layout_collapseMode="pin"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"
+                    app:tabIndicatorFullWidth="true" />
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/viewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="600dp"
+                    android:layout_below="@+id/photosVideosContactsTabLayout"
+                    />
+            </RelativeLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</RelativeLayout>
