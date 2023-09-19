@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
 
         Toast.makeText(this, "App is running", Toast.LENGTH_SHORT).show()
 
-        val heart = findViewById<ImageView>(R.id.insta) as ImageView
+        val heart = findViewById<ImageView>(R.id.likesIcon) as ImageView
         heart.setOnClickListener{
             Toast.makeText(this@MainActivity, "Coming Soon", Toast.LENGTH_SHORT).show()
         }
